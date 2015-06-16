@@ -14,13 +14,17 @@ buildscript {
     }
 }
 
-repositories {
-    maven { url "http://dl.bintray.com/populov/maven" }
-    maven { url "http://repo1.maven.org/maven2" }
-    maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+subprojects{
 
-    jcenter()
-    flatDir {
-        dir 'libs'
+    repositories {
+        maven { url "http://dl.bintray.com/populov/maven" }
+        maven { url "http://repo1.maven.org/maven2" }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+
+        jcenter()
+        flatDir {
+            dir 'libs'
+        }
     }
+
 }
